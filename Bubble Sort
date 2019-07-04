@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int temp=0;
+	//taking the temporary variable for sorting purpose
+	
+	Scanner in = new Scanner(System.in);
+    System.out.println("Input number of integers to sort : ");
+    int n = in.nextInt();
+    int a[] = new int[n];
+		//int a[]={67,3,62,90,44,11,35};
+		//We want to make  Sort here with this array list
+		
+		for (int num = 0; num < n; num++)
+		{
+		    System.out.println("Input "+n+ " integers to sort : ");
+            a[num] = in.nextInt();
+		}
+		//Logic why took two for loops :
+		//outer for loop I am conidering as first element inner loop will start after the i elements value
+		
+		for(int i=0;i<a.length;i++)
+		{
+		    for (int j=0;j<a.length-1-i;j++)
+		    {
+		        if(a[j]>a[j+1])
+		        {
+		            temp= a[j];
+		            a[j]=a[j+1];
+		            a[j+1]=temp;
+		        }
+		    }
+		}
+		    System.out.println("sorted list is :");
+		    for(int i=0;i<a.length;i++)
+		    {
+		        System.out.println(a[i]);
+		    }
+	}
+}
