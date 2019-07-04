@@ -3,14 +3,14 @@ public class Main
 {
 	public static void main(String[] args) {
 	int temp=0;
-	//taking the temporary variable for sorting purpose
+	//taking the temporary variable for swapping purpose
 	
 	Scanner in = new Scanner(System.in);
     System.out.println("Input number of integers to sort : ");
     int n = in.nextInt();
     int a[] = new int[n];
 		//int a[]={67,3,62,90,44,11,35};
-		//We want to make  Sort here with this array list
+		//We want to make Bubble Sort here with this array list
 		
 		for (int num = 0; num < n; num++)
 		{
@@ -18,7 +18,7 @@ public class Main
             a[num] = in.nextInt();
 		}
 		//Logic why took two for loops :
-		//outer for loop I am conidering as first element inner loop will start after the i elements value
+		//outer for loop conidering as Rounds count and inner loop will compare adjacent elements
 		
 		for(int i=0;i<a.length;i++)
 		{
